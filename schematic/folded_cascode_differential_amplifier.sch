@@ -51,15 +51,15 @@ N -320 -90 -170 -90 { lab=Vbn}
 N -320 -190 -300 -190 { lab=#net9}
 N 570 -290 680 -290 { lab=Vout}
 N -330 -660 -180 -660 { lab=Vbp}
-N -520 -630 -490 -630 { lab=#net11}
-N -490 -660 -490 -630 { lab=#net11}
+N -520 -630 -490 -630 { lab=Vbp}
+N -490 -660 -490 -630 { lab=Vbp}
 N -380 -120 -380 -90 { lab=Vbn}
 N -410 -120 -380 -120 { lab=Vbn}
-N -410 -630 -410 -610 { lab=#net12}
+N -410 -630 -410 -610 { lab=#net11}
 N -410 -600 -410 -120 { lab=Vbn}
 N -380 -90 -320 -90 { lab=Vbn}
-N -380 -660 -330 -660 {}
-N -490 -660 -380 -660 {}
+N -380 -660 -330 -660 { lab=Vbp}
+N -490 -660 -380 -660 { lab=Vbp}
 C {madvlsi/pmos3.sym} 170 -430 0 0 {name=M1
 L=0.5
 W=12
@@ -410,8 +410,8 @@ value=0.5}
 C {madvlsi/gnd.sym} 760 -210 0 0 {name=l21 lab=GND}
 C {madvlsi/vdd.sym} 760 -270 0 0 {name=l22 lab=VDD}
 C {madvlsi/gnd.sym} 760 -50 0 0 {name=l24 lab=GND}
-C {devices/code_shown.sym} 800 -340 0 0 {name=SPICE only_toplevel=false value=".dc V2 0 1.8 0.01
-.save all"}
+C {devices/code_shown.sym} 800 -340 0 0 {name=SPICE only_toplevel=false value=".dc V2 0 1.8 0.01 V1 0 1 0.2
+.save v(Vout) v(V1) v(V2)"}
 C {madvlsi/capacitor.sym} 660 -260 0 0 {name=C1
 value=2p
 m=1}
