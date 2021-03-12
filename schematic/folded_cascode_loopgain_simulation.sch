@@ -38,11 +38,11 @@ value=1.8}
 C {madvlsi/vdd.sym} 6410 -120 0 0 {name=l10 lab=VDD}
 C {madvlsi/gnd.sym} 6510 -60 0 0 {name=l11 lab=GND}
 C {madvlsi/vsource.sym} 6510 -90 0 0 {name=V1
-value=0.7}
+value=0.5}
 C {devices/lab_pin.sym} 6510 -120 1 0 {name=l12 sig_type=std_logic lab=V1}
 C {madvlsi/gnd.sym} 6590 -60 0 0 {name=l13 lab=GND}
 C {madvlsi/vsource.sym} 6590 -90 0 0 {name=V2
-value="0.7 AC 1"}
+value="0.5 AC 1"}
 C {devices/lab_pin.sym} 6590 -120 1 0 {name=l14 sig_type=std_logic lab=V2}
 C {madvlsi/isource.sym} 6680 -90 0 0 {name=Ib
 value=1u}

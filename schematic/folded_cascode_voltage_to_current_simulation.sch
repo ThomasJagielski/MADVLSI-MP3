@@ -43,7 +43,7 @@ value=0.7}
 C {devices/lab_pin.sym} 6510 -120 1 0 {name=l12 sig_type=std_logic lab=V1}
 C {madvlsi/gnd.sym} 6590 -60 0 0 {name=l13 lab=GND}
 C {madvlsi/vsource.sym} 6590 -90 0 0 {name=V2
-value=0.3}
+value=0.5}
 C {devices/lab_pin.sym} 6590 -120 1 0 {name=l14 sig_type=std_logic lab=V2}
 C {madvlsi/isource.sym} 6680 -90 0 0 {name=Ib
 value=1u}
@@ -55,7 +55,7 @@ only_toplevel=false
 value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 6700 -280 0 0 {name=SPICE only_toplevel=false value=".dc V1 0 1.8 0.0001
+C {devices/code_shown.sym} 6700 -280 0 0 {name=SPICE only_toplevel=false value=".dc V1 0.3 0.7 0.00001
 .save all"}
 C {madvlsi/vsource.sym} 6460 -320 0 0 {name=Vout
 value=0.6}
