@@ -52,5 +52,5 @@ only_toplevel=false
 value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 6700 -280 0 0 {name=SPICE only_toplevel=false value=".dc V1 0 1.8 0.01 V2 0 1.2 0.2
+C {devices/code_shown.sym} 6700 -280 0 0 {name=SPICE only_toplevel=false value=".dc V1 0 1.8 0.01 V2 0.1 0.9 0.2
 .save v(Vout) v(V1) v(V2)"}
