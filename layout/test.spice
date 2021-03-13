@@ -1,0 +1,17 @@
+* SPICE3 file created from test.ext - technology: sky130A
+
+
+* Top level circuit test
+
+X0 Vn Vbn a_270_n3530# Vn sky130_fd_pr__nfet_01v8 ad=1.2e+13p pd=5.2e+07u as=6e+12p ps=2.6e+07u w=6e+06u l=500000u
+X1 Vn Vn a_70_n3530# Vn sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=6e+12p ps=2.6e+07u w=6e+06u l=500000u
+X2 a_670_n3530# Vbn Vn Vn sky130_fd_pr__nfet_01v8 ad=6e+12p pd=2.6e+07u as=0p ps=0u w=6e+06u l=500000u
+X3 a_870_n3530# Vcn a_670_n3530# Vn sky130_fd_pr__nfet_01v8 ad=3e+12p pd=1.3e+07u as=0p ps=0u w=6e+06u l=500000u
+X4 a_70_n3530# Vn Vn Vn sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=6e+06u l=500000u
+X5 a_670_n3530# Vcn a_870_n3530# Vn sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=6e+06u l=500000u
+X6 Vn Vbn a_670_n3530# Vn sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=6e+06u l=500000u
+X7 a_270_n3530# Vbn Vn Vn sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=6e+06u l=500000u
+X8 a_270_n3530# Vcn a_70_n3530# Vn sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=6e+06u l=500000u
+X9 a_70_n3530# Vcn a_270_n3530# Vn sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=6e+06u l=500000u
+.end
+
