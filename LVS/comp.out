@@ -1,18 +1,18 @@
 Equate elements:  no current cell.
 Equate elements:  no current cell.
-Class folded_cascode_differential_amplifier_LDS_xschem_copy.spice:  Merged 25 devices.
-Class folded_cascode_differential_amplifier.spice:  Merged 25 devices.
+Class cascode_bias.spice:  Merged 23 devices.
+Class cascode_bias_LDS_copy.spice:  Merged 23 devices.
 
 Subcircuit summary:
-Circuit 1: folded_cascode_differential_amp |Circuit 2: folded_cascode_differential_amp 
+Circuit 1: cascode_bias.spice              |Circuit 2: cascode_bias_LDS_copy.spice     
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (5)                |sky130_fd_pr__nfet_01v8 (5)                
-sky130_fd_pr__pfet_01v8 (10)               |sky130_fd_pr__pfet_01v8 (10)               
-Number of devices: 15                      |Number of devices: 15                      
-Number of nets: 15                         |Number of nets: 15                         
+sky130_fd_pr__pfet_01v8 (9)                |sky130_fd_pr__pfet_01v8 (9)                
+sky130_fd_pr__nfet_01v8 (8)                |sky130_fd_pr__nfet_01v8 (8)                
+Number of devices: 17                      |Number of devices: 17                      
+Number of nets: 10                         |Number of nets: 10                         
 ---------------------------------------------------------------------------------------
 Circuits match uniquely.
 Netlists match uniquely.
 Cells have no pins;  pin matching not needed.
-Device classes folded_cascode_differential_amplifier_LDS_xschem_copy.spice and folded_cascode_differential_amplifier.spice are equivalent.
+Device classes cascode_bias.spice and cascode_bias_LDS_copy.spice are equivalent.
 Circuits match uniquely.
