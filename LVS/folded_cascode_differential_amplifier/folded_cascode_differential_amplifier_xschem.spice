@@ -1,4 +1,4 @@
-**.subckt folded_cascode_differential_amplifier
+**.subckt folded_cascode_differential_amplifier_xschem
 X1 VDD Vbp net1 Vout net3 net2 V1 V2 GND folded_cascode_differential_amplifier_LDS
 X2 VDD net1 Vbp net2 net3 GND cascode_bias_LDS
 **.ends

@@ -1,0 +1,22 @@
+Flattening unmatched subcell differential_pair in circuit folded_cascode_differential_amplifier.spice (0)(1 instance)
+Flattening unmatched subcell cascode_bias in circuit folded_cascode_differential_amplifier.spice (0)(1 instance)
+Flattening unmatched subcell folded_cascode_differential_amplifier_LDS in circuit folded_cascode_differential_amplifier_xschem.spice (1)(1 instance)
+Flattening unmatched subcell cascode_bias_LDS in circuit folded_cascode_differential_amplifier_xschem.spice (1)(1 instance)
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+Class folded_cascode_differential_amplifier.spice:  Merged 49 devices.
+Class folded_cascode_differential_amplifier_xschem.spice:  Merged 49 devices.
+
+Subcircuit summary:
+Circuit 1: folded_cascode_differential_amp |Circuit 2: folded_cascode_differential_amp 
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (18)               |sky130_fd_pr__pfet_01v8 (18)               
+sky130_fd_pr__nfet_01v8 (13)               |sky130_fd_pr__nfet_01v8 (13)               
+Number of devices: 31                      |Number of devices: 31                      
+Number of nets: 19                         |Number of nets: 19                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes folded_cascode_differential_amplifier.spice and folded_cascode_differential_amplifier_xschem.spice are equivalent.
+Circuits match uniquely.
