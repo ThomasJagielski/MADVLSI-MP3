@@ -113,23 +113,27 @@ xlabel('Frequency [Hz]')
 ylabel('Phase [Degrees (^{\circ})]')
 
 %% Small-Signal Step Response
-% Up Response
-% order of columns = time, vout
-small_signal_up_data = csvread('./folded_cascode_small-signal_step_up.csv',1);
+% order of columns = time, vout, v1
+small_signal_data = csvread('./folded_cascode_small-signal_step.csv',1);
 
 figure
-plot(small_signal_up_data(:,1),small_signal_up_data(:,2),'.')
-title('Positive Small-Signal Step Response')
-xlabel('Time [S]')
-ylabel('V_{out} [V]')
-
-% Down Response
-small_signal_down_data = csvread('./folded_cascode_small-signal_step_down.csv',1);
-
-figure
-plot(small_signal_down_data(:,1),small_signal_down_data(:,2),'.')
-title('Negative Small-Signal Step Response')
+plot(small_signal_data(:,1),small_signal_data(:,2),'.')
+hold on
+plot(small_signal_data(:,1), small_signal_data(:,3))
+hold off
+title('Small-Signal Step Response')
 xlabel('Time [S]')
 ylabel('V_{out} [V]')
 
 %% Large-Amplitude Step Response
+% order of columns = time, vout, v1
+large_signal_data = csvread('./folded_cascode_large_amplitude_step.csv',1);
+
+figure
+plot(large_signal_data(1:2:end,1),large_signal_data(1:2:end,2),'.')
+hold on
+plot(large_signal_data(:,1), large_signal_data(:,3))
+hold off
+title('Large-Signal Step Response')
+xlabel('Time [S]')
+ylabel('V_{out} [V]')
