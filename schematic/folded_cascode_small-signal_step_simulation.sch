@@ -31,15 +31,15 @@ C {madvlsi/vdd.sym} 6300 -460 0 0 {name=l4 lab=VDD}
 C {devices/lab_pin.sym} 6440 -360 2 0 {name=l5 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} 6220 -390 0 0 {name=l6 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 5900 -360 0 0 {name=l8 sig_type=std_logic lab=Vbp}
-C {madvlsi/gnd.sym} 6410 -60 0 0 {name=l9 lab=GND}
-C {madvlsi/vsource.sym} 6410 -90 0 0 {name=VDD
+C {madvlsi/gnd.sym} 6300 -60 0 0 {name=l9 lab=GND}
+C {madvlsi/vsource.sym} 6300 -90 0 0 {name=VDD
 value=1.8}
-C {madvlsi/vdd.sym} 6410 -120 0 0 {name=l10 lab=VDD}
-C {madvlsi/gnd.sym} 6510 -60 0 0 {name=l11 lab=GND}
-C {madvlsi/vsource.sym} 6510 -90 0 0 {name=V1
-value="pwl(0 0.5 1us 0.5 1.1us 0.45 2.5us 0.45)"
+C {madvlsi/vdd.sym} 6300 -120 0 0 {name=l10 lab=VDD}
+C {madvlsi/gnd.sym} 6400 -60 0 0 {name=l11 lab=GND}
+C {madvlsi/vsource.sym} 6400 -90 0 0 {name=V1
+value="pwl(0 0.5 1us 0.5 1.1us 0.51 2.5us 0.51 2.51us 0.5 4us 0.5)"
 }
-C {devices/lab_pin.sym} 6510 -120 1 0 {name=l12 sig_type=std_logic lab=V1}
+C {devices/lab_pin.sym} 6400 -120 1 0 {name=l12 sig_type=std_logic lab=V1}
 C {madvlsi/isource.sym} 6760 -90 0 0 {name=Ib
 value=1u}
 C {devices/lab_pin.sym} 6760 -120 1 0 {name=l15 sig_type=std_logic lab=Vbp}
@@ -50,7 +50,7 @@ only_toplevel=false
 value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/code_shown.sym} 6630 -280 0 0 {name=SPICE only_toplevel=false value=".tran 0.01u 2.5u
+C {devices/code_shown.sym} 6630 -280 0 0 {name=SPICE only_toplevel=false value=".tran 0.01u 4u
 .save all"}
 C {madvlsi/capacitor.sym} 6420 -320 0 0 {name=C1
 value=2p
