@@ -1,7 +1,7 @@
-* SPICE3 file created from folded_cascode_differential_amplifier.ext - technology: sky130A
+* SPICE3 file created from differential_pair.ext - technology: sky130A
 
 
-* Top level circuit folded_cascode_differential_amplifier
+* Top level circuit differential_pair
 
 X0 a_70_160# V1 a_270_160# Vp sky130_fd_pr__pfet_01v8 ad=4.5e+12p pd=2.1e+07u as=9e+12p ps=4.4e+07u w=3e+06u l=500000u
 X1 a_270_160# Vbp Vp Vp sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=2.025e+13p ps=9.4e+07u w=1.5e+06u l=500000u

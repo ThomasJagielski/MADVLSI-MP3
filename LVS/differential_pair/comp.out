@@ -1,0 +1,18 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+Class differential_pair.spice:  Merged 25 devices.
+Class differential_pair_xschem.spice:  Merged 25 devices.
+
+Subcircuit summary:
+Circuit 1: differential_pair.spice         |Circuit 2: differential_pair_xschem.spice  
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (10)               |sky130_fd_pr__pfet_01v8 (10)               
+sky130_fd_pr__nfet_01v8 (5)                |sky130_fd_pr__nfet_01v8 (5)                
+Number of devices: 15                      |Number of devices: 15                      
+Number of nets: 15                         |Number of nets: 15                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes differential_pair.spice and differential_pair_xschem.spice are equivalent.
+Circuits match uniquely.
