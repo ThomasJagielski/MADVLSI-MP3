@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1615785575
+timestamp 1615823122
 << locali >>
 rect 1530 3270 1560 3290
 rect 1530 1640 1560 1660
@@ -9,14 +9,14 @@ rect 1530 0 1560 20
 << metal1 >>
 rect 1530 1720 1560 3240
 rect 1525 60 1565 650
+use cascode_bias  cascode_bias_0
+timestamp 1615822914
+transform 1 0 220 0 1 2630
+box -220 -2630 1330 670
 use differential_pair  differential_pair_0
 timestamp 1615700760
 transform 1 0 1675 0 1 2520
 box -135 -2540 1055 780
-use cascode_bias  cascode_bias_0
-timestamp 1615785139
-transform 1 0 220 0 1 2630
-box -220 -2630 1330 670
 << labels >>
 rlabel space 20 355 20 355 7 VN
 rlabel space 20 2545 20 2545 7 Vbp

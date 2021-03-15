@@ -4,8 +4,8 @@ tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
-use differential_pair differential_pair_0 1 0 3350 0 1 5040
 use cascode_bias cascode_bias_0 1 0 440 0 1 5260
+use differential_pair differential_pair_0 1 0 3350 0 1 5040
 node "m1_3050_120#" 2 577.96 3050 120 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 94400 2520 0 0 0 0 0 0 0 0 0 0
 node "m1_3060_3440#" 6 1389.56 3060 3440 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 182400 6200 0 0 0 0 0 0 0 0 0 0
 node "li_3060_0#" 18 57.22 3060 0 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2400 200 0 0 0 0 0 0 0 0 0 0 0 0
@@ -13,35 +13,35 @@ node "li_3060_3120#" 18 57.22 3060 3120 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "li_3060_3280#" 18 57.22 3060 3280 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2400 200 0 0 0 0 0 0 0 0 0 0 0 0
 node "li_3060_6540#" 18 57.22 3060 6540 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2400 200 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "li_3060_3280#" "li_3060_3120#" 16.5
+cap "li_3060_3120#" "li_3060_3280#" 16.5
 subcap "m1_3050_120#" -3125.29
 subcap "m1_3050_120#" -278.362
-cap "differential_pair_0/Vn" "differential_pair_0/a_70_n4930#" 102.474
+cap "differential_pair_0/a_70_n4930#" "cascode_bias_0/VN" 102.474
 subcap "li_3060_3120#" -372.336
-cap "differential_pair_0/Vn" "differential_pair_0/Vbn" 181.5
+cap "cascode_bias_0/VN" "cascode_bias_0/Vbn" 181.5
 subcap "m1_3060_3440#" -2704.1
 subcap "li_3060_3280#" -107.433
-cap "differential_pair_0/Vbn" "cascode_bias_0/VN" 49.5
-cap "differential_pair_0/Vout" "cascode_bias_0/VP" 62.5263
-cap "differential_pair_0/Vcp" "cascode_bias_0/VP" 1.42109e-14
-cap "cascode_bias_0/VP" "cascode_bias_0/Vbp" 11.2895
-cap "differential_pair_0/Vout" "cascode_bias_0/VP" 39.9474
-cap "differential_pair_0/a_70_150#" "cascode_bias_0/VP" 22.5789
+cap "differential_pair_0/Vp" "cascode_bias_0/Vcp" 1.42109e-14
+cap "differential_pair_0/Vp" "differential_pair_0/Vout" 62.5263
+cap "cascode_bias_0/Vbn" "cascode_bias_0/VN" 49.5
 cap "cascode_bias_0/Vbp" "cascode_bias_0/VP" 11.2895
-cap "differential_pair_0/Vbp" "differential_pair_0/Vp" 21.7105
-cap "differential_pair_0/Vp" "cascode_bias_0/Vbp" -1.77636e-15
-cap "differential_pair_0/Vbp" "differential_pair_0/Vp" 21.7105
-cap "differential_pair_0/Vp" "differential_pair_0/a_70_150#" 19.1053
-merge "differential_pair_0/Vn" "m1_3050_120#" -580.234 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 560940 -4760 0 0 0 0 0 0 0 0 0 0
-merge "m1_3050_120#" "cascode_bias_0/VN"
+cap "differential_pair_0/Vout" "cascode_bias_0/VP" 39.9474
+cap "cascode_bias_0/Vbp" "cascode_bias_0/VP" 11.2895
+cap "differential_pair_0/a_70_150#" "cascode_bias_0/VP" 22.5789
+cap "cascode_bias_0/VP" "cascode_bias_0/Vbp" -1.77636e-15
+cap "cascode_bias_0/VP" "cascode_bias_0/Vbp" 21.7105
+cap "differential_pair_0/a_70_150#" "cascode_bias_0/VP" 19.1053
+cap "cascode_bias_0/Vbp" "cascode_bias_0/VP" 21.7105
+merge "differential_pair_0/Vn" "cascode_bias_0/VN" -580.234 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 560940 -4760 0 0 0 0 0 0 0 0 0 0
 merge "cascode_bias_0/VN" "VSUBS"
-merge "cascode_bias_0/VP" "differential_pair_0/Vp" 347.159 0 0 0 0 616200 -4760 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1051260 -10780 0 0 0 0 0 0 0 0 0 0
-merge "differential_pair_0/Vp" "m1_3060_3440#"
-merge "cascode_bias_0/Vbn" "differential_pair_0/Vbn" -289.495 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -265400 -160 0 0 0 0 0 0 0 0 0 0 0 0
-merge "differential_pair_0/Vbn" "li_3060_3120#"
-merge "cascode_bias_0/Vcp" "differential_pair_0/Vcp" -22.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23200 -160 0 0 0 0 0 0 0 0 0 0 0 0
-merge "differential_pair_0/Vcp" "li_3060_3280#"
-merge "cascode_bias_0/Vcn" "differential_pair_0/Vcn" -22.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23200 -160 0 0 0 0 0 0 0 0 0 0 0 0
-merge "differential_pair_0/Vcn" "li_3060_0#"
-merge "cascode_bias_0/Vbp" "differential_pair_0/Vbp" -22.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23200 -160 0 0 0 0 0 0 0 0 0 0 0 0
-merge "differential_pair_0/Vbp" "li_3060_6540#"
+merge "VSUBS" "m1_3050_120#"
+merge "differential_pair_0/Vp" "cascode_bias_0/VP" 347.159 0 0 0 0 616200 -4760 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1051260 -10780 0 0 0 0 0 0 0 0 0 0
+merge "cascode_bias_0/VP" "m1_3060_3440#"
+merge "differential_pair_0/Vbn" "cascode_bias_0/Vbn" -289.495 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -265400 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cascode_bias_0/Vbn" "li_3060_3120#"
+merge "differential_pair_0/Vcp" "cascode_bias_0/Vcp" -22.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23200 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cascode_bias_0/Vcp" "li_3060_3280#"
+merge "differential_pair_0/Vcn" "cascode_bias_0/Vcn" -22.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23200 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cascode_bias_0/Vcn" "li_3060_0#"
+merge "differential_pair_0/Vbp" "cascode_bias_0/Vbp" -22.54 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23200 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cascode_bias_0/Vbp" "li_3060_6540#"

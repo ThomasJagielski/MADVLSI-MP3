@@ -1,20 +1,20 @@
 Equate elements:  no current cell.
 Equate elements:  no current cell.
-Class cascode_bias.spice:  Merged 25 devices.
-Class new_cascode_bias_xschem.spice:  Merged 25 devices.
+Class cascode_bias.spice:  Merged 23 devices.
+Class cascode_bias_xschem.spice:  Merged 23 devices.
 
 Subcircuit summary:
-Circuit 1: cascode_bias.spice              |Circuit 2: new_cascode_bias_xschem.spice   
+Circuit 1: cascode_bias.spice              |Circuit 2: cascode_bias_xschem.spice       
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__pfet_01v8 (13)               |sky130_fd_pr__pfet_01v8 (13)               
-sky130_fd_pr__nfet_01v8 (10)               |sky130_fd_pr__nfet_01v8 (10)               
-Number of devices: 23                      |Number of devices: 23                      
-Number of nets: 13                         |Number of nets: 13                         
+sky130_fd_pr__nfet_01v8 (12)               |sky130_fd_pr__nfet_01v8 (12)               
+Number of devices: 25                      |Number of devices: 25                      
+Number of nets: 14                         |Number of nets: 14                         
 ---------------------------------------------------------------------------------------
 Resolving automorphisms by property value.
 Resolving automorphisms by pin name.
-Netlists match with 3 symmetries.
+Netlists match with 6 symmetries.
 Circuits match correctly.
 Cells have no pins;  pin matching not needed.
-Device classes cascode_bias.spice and new_cascode_bias_xschem.spice are equivalent.
+Device classes cascode_bias.spice and cascode_bias_xschem.spice are equivalent.
 Circuits match uniquely.
