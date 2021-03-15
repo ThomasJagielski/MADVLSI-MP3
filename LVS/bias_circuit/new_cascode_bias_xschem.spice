@@ -1,4 +1,4 @@
-**.subckt cascode_bias_xschem Vcp Vbn Vcn Vbp
+**.subckt new_cascode_bias_xschem Vcp Vbn Vcn Vbp
 *.opin Vcp
 *.opin Vbn
 *.opin Vcn

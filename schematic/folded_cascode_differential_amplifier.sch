@@ -250,7 +250,7 @@ L=0.5
 W=12
 body=VDD
 nf=1
-mult=0.1
+mult=0.5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -277,10 +277,10 @@ spiceprefix=X
 }
 C {madvlsi/nmos3.sym} -270 -560 0 0 {name=M14
 L=0.5
-W=12
+W=1
 body=GND
 nf=1
-mult=10
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -341,7 +341,7 @@ L=0.5
 W=12
 body=VDD
 nf=1
-mult=10
+mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -356,7 +356,7 @@ L=0.5
 W=12
 body=GND
 nf=1
-mult=0.1
+mult=0.5
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -410,7 +410,7 @@ value=0.5}
 C {madvlsi/gnd.sym} 760 -210 0 0 {name=l21 lab=GND}
 C {madvlsi/vdd.sym} 760 -270 0 0 {name=l22 lab=VDD}
 C {madvlsi/gnd.sym} 760 -50 0 0 {name=l24 lab=GND}
-C {devices/code_shown.sym} 800 -340 0 0 {name=SPICE only_toplevel=false value=".dc V2 0 1.8 0.01 V1 0 1 0.2
+C {devices/code_shown.sym} 800 -340 0 0 {name=SPICE only_toplevel=false value=".dc V1 0 1.8 0.01 V2 0 1 0.2
 .save v(Vout) v(V1) v(V2)"}
 C {madvlsi/capacitor.sym} 660 -260 0 0 {name=C1
 value=2p
