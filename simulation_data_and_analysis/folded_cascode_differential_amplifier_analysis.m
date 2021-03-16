@@ -63,9 +63,11 @@ voltage_to_current_input_diff = voltage_to_current_data(:,2) -...
                                     voltage_to_current_data(:,3);
                                 
                                 
-voltage_to_current_best_fit_parameters = polyfit(voltage_to_current_input_diff(15000:25000,:),voltage_to_current_data(15000:25000,1),1);
+voltage_to_current_best_fit_parameters = polyfit(voltage_to_current_input_diff(19000:20000,:),voltage_to_current_data(19000:20000,1),1);
 best_fit_line_voltage_to_current = voltage_to_current_best_fit_parameters(1)*...
     voltage_to_current_input_diff+voltage_to_current_best_fit_parameters(2);
+
+incremental_transconductance = voltage_to_current_best_fit_parameters(1);
 
 figure
 plot(voltage_to_current_input_diff(1:100:end),voltage_to_current_data((1:100:end),1),'.')
@@ -140,6 +142,7 @@ hold off
 title('Small-Signal Step Response')
 xlabel('Time [S]')
 ylabel('V_{out} [V]')
+legend('Simulated Data for V_{out}','Step Input (V_{in})')
 
 %%% Small Signal Step in Up-going %%%
 small_signal_tau_up_time = small_signal_data(120:250,1) - min(small_signal_data(120:250,1)); 
@@ -150,10 +153,15 @@ a = -0.009524;
 tau_up = 1.546e-7;
 
 figure
+subplot(2,1,1);
 plot(small_signal_tau_up_time, small_signal_tau_up_Vout,'.')
 hold on
 plot(small_signal_tau_up_time, a*exp(-small_signal_tau_up_time/tau_up))
 hold off
+title('Up-Going Small-Signal Step Response Fitting')
+xlabel('Time [s]')
+ylabel('V_{out} [V] (Normalized to 0 V)')
+legend('Simulation Data', 'Line of Best Fit')
 
 %%% Small Signal Step in Down-going %%%
 small_signal_tau_down_time = small_signal_data(280:400,1) - min(small_signal_data(280:400,1)); 
@@ -164,11 +172,15 @@ a = 0.007959;
 tau_down = 1.372e-7;
 c = -5.859e-5;
 
-figure
+subplot(2,1,2); 
 plot(small_signal_tau_down_time, small_signal_tau_down_Vout,'.')
 hold on
 plot(small_signal_tau_down_time, a*exp(-small_signal_tau_down_time/tau_down)+c)
 hold off
+title('Up-Going Small-Signal Step Response Fitting')
+xlabel('Time [s]')
+ylabel('V_{out} [V] (Normalized to 0 V)')
+legend('Simulation Data', 'Line of Best Fit')
 
 % Percent Error for tau
 percent_error_tau = (abs(tau_up - tau_down) / tau_up) * 100;
@@ -185,6 +197,7 @@ hold off
 title('Large-Signal Step Response')
 xlabel('Time [S]')
 ylabel('V_{out} [V]')
+legend('Simulated Output Response (V_{out})', 'Step Input (V_{in})')
 
 large_step_up_going_best_fit_parameters = polyfit(large_signal_data(127:229,1),large_signal_data(127:229,2),1);
 large_step_up_going_fit = large_step_up_going_best_fit_parameters(1)*...
@@ -206,7 +219,8 @@ plot(large_signal_data(:,1), large_signal_data(:,3))
 plot(large_signal_data(127:229,1), large_step_up_going_fit, '-')
 plot(large_signal_data(1035:1207,1), large_step_down_going_fit, '-')
 hold off
-title('Large-Signal Step Response')
+title('Large-Signal Step Response With Slew Rate Lines of Best Fit')
 xlabel('Time [S]')
 ylabel('V_{out} [V]')
+legend('Simulated Output Response (V_{out})', 'Step Input (V_{in})', 'Up-Going Line of Best Fit', 'Down-Going Line of Best Fit')
  
