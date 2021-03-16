@@ -82,27 +82,25 @@ axis([-0.2 0.2 -0.5e-6 0.5e-6])
 % order of columns = Frequency [Hz], Magnitude [dB], Phase [Degrees]
 loopgain_data = csvread('./folded_cascode_loopgain.csv',1);
 
-dc_gain = 20 * log10(2393.3);
-
-gain_percent_error = (abs(max(loopgain_data(:,2)) - dc_gain) / max(loopgain_data(:,2))) * 100;
-
-unity_gain_crossover_frequency_slope = (-0.48941 - 0.54699)/(891250.938 - 794328.235);
-unity_gain_crossover_frequency = 891250.938 + (0.48941 / unity_gain_crossover_frequency_slope);
-
 figure
 subplot(2,1,1);
 semilogx(loopgain_data(:,1),loopgain_data(:,2),'.')
-xline(unity_gain_crossover_frequency)
 title('Loopgain of Folded Cascode Differential Amplifier - Magnitude')
 xlabel('Frequency [Hz]')
 ylabel('Magnitude [dB]')
-legend('Gain of Loopgain Configured Differential Amplifier','Unity Gain Crossover Frequency')
 
 subplot(2,1,2); 
 semilogx(loopgain_data(:,1),loopgain_data(:,3),'.')
 title('Loopgain of Folded Cascode Differential Amplifier - Phase')
 xlabel('Frequency [Hz]')
-ylabel('Phase [Degrees (^{\circ})]') 
+ylabel('Phase [Degrees (^{\circ})]')
+
+dc_gain = 20 * log10(2393.3);
+
+gain_percent_error = (abs(max(loopgain_data(:,2)) - dc_gain) / max(loopgain_data(:,2))) * 100;
+
+unity_gain_crossover_frequency_slope = (-0.48941 - 0.54699)/(891250.938 - 794328.235);
+unity_gain_crossover_frequency = 891250.938 + 0.48941/ unity_gain_crossover_frequency_slope * (x - 891250.938) - 0.48941; 
 
 
 
@@ -123,11 +121,6 @@ title('Unity Gain Folded Cascode Differential Amplifier Response - Phase')
 xlabel('Frequency [Hz]')
 ylabel('Phase [Degrees (^{\circ})]')
 
-unity_gain_corner_frequency = 1050000;
-
-percent_error_corner_frequency = (abs(unity_gain_corner_frequency -...
-    900000) / unity_gain_corner_frequency) * 100;
-
 %% Small-Signal Step Response
 % order of columns = time, vout, v1
 small_signal_data = csvread('./folded_cascode_small-signal_step.csv',1);
@@ -136,6 +129,15 @@ figure
 plot(small_signal_data(:,1),small_signal_data(:,2),'.')
 hold on
 plot(small_signal_data(:,1), small_signal_data(:,3))
+hold off
+title('Small-Signal Step Response')
+xlabel('Time [S]')
+ylabel('V_{out} [V]')
+
+figure
+plot(small_signal_data(:,1),small_signal_data(:,2),'.')
+hold on
+plot(small_signal_data(120:250,1), small_signal_data(120:250,2))
 hold off
 title('Small-Signal Step Response')
 xlabel('Time [S]')
@@ -193,11 +195,6 @@ large_step_up_going_fit = large_step_up_going_best_fit_parameters(1)*...
 large_step_down_going_best_fit_parameters = polyfit(large_signal_data(1035:1207,1),large_signal_data(1035:1207,2),1);
 large_step_down_going_fit = large_step_down_going_best_fit_parameters(1)*...
     large_signal_data(1035:1207,1)+large_step_down_going_best_fit_parameters(2);
-
-slew_up = large_step_up_going_best_fit_parameters(1);
-slew_down = large_step_down_going_best_fit_parameters(1);
-
-slew_percent_error = ((slew_up - slew_down) / slew_up) * 100;
 
 figure
 plot(large_signal_data(1:2:end,1),large_signal_data(1:2:end,2),'.')

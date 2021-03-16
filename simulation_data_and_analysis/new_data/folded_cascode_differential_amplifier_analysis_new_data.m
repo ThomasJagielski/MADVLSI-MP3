@@ -50,6 +50,8 @@ legend('V_{2} = 0.1 V','V_{2} = 0.3 V','V_{2} = 0.5 V',...
     'Fit V_{2} = 0.3 V','Fit V_{2} = 0.5 V','Fit V_{2} = 0.7 V',...
     'Fit V_{2} = 0.9 V','location', 'Southeast')
 
+dc_gain = mean([vtc_0_1_fit_params(1), vtc_0_3_fit_params(1), vtc_0_5_fit_params(1), vtc_0_7_fit_params(1)])
+
 %% Voltage-to-Current Transfer Chracteristics
 % order of columns = [Iout, V1, V2, Vout]
 voltage_to_current_data = csvread('./folded_cascode_voltage_to_current.csv',1);
