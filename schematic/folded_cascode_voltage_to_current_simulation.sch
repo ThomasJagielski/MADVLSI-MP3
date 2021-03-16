@@ -58,6 +58,6 @@ value=".option wnflag=1
 C {devices/code_shown.sym} 6700 -280 0 0 {name=SPICE only_toplevel=false value=".dc V1 0.3 0.7 0.00001
 .save all"}
 C {madvlsi/vsource.sym} 6460 -320 0 0 {name=Vout
-value=0.6}
+value=0.9}
 C {madvlsi/gnd.sym} 6460 -290 0 0 {name=l17 lab=GND}
 C {madvlsi/ammeter1.sym} 6430 -360 3 0 {name=VIout}
