@@ -52,7 +52,7 @@ legend('V_{2} = 0.1 V','V_{2} = 0.3 V','V_{2} = 0.5 V',...
 
 %% Voltage-to-Current Transfer Chracteristics
 % order of columns = [Iout, V1, V2, Vout]
-voltage_to_current_data = csvread('./folded_cascode_voltage_to_current.csv',1);
+voltage_to_current_data = csvread('./folded_cascode_voltage_to_current_new.csv',1);
 
 % Separate Data
 %voltage_to_current_data.Iout = voltage_to_current_data(:,1);
